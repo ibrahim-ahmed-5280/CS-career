@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 72" role="img" aria-label="CS Career logo, option 14: a laptop wearing a graduation cap">
+  <polygon points="44,4 72,15.5 44,27 16,15.5" fill="#1F5FD8" stroke="#1F5FD8" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M29 21.5V28C29 33 59 33 59 28V21.5L44 27.5Z" fill="#0A1F44"/>
+  <path d="M68 17V31" stroke="#8DB8FF" stroke-width="3" stroke-linecap="round"/><circle cx="68" cy="34" r="3.2" fill="#8DB8FF"/>
+  <rect x="17" y="37" width="54" height="26" rx="4" fill="#0A1F44"/>
+  <rect x="21" y="41" width="46" height="18" rx="2" fill="#EAF2FF"/>
+  <g fill="none" stroke="#1F5FD8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M34 45L29 50L34 55"/><path d="M54 45L59 50L54 55"/><path d="M47 44L41 56"/>
+  </g>
+  <rect x="7" y="64" width="74" height="6" rx="3" fill="#1F5FD8"/>
+</svg>

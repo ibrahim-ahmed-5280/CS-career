@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="CS Career logo, option 2: graduation cap">
+  <rect width="64" height="64" rx="16" fill="#0A1F44"/>
+  <path d="M32 14L57 26L32 38L7 26Z" fill="#fff"/>
+  <path d="M17 33V43C17 48 47 48 47 43V33L32 40Z" fill="#8DB8FF"/>
+  <path d="M52 28.5V42" stroke="#1F5FD8" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <circle cx="52" cy="46" r="4" fill="#1F5FD8"/>
+</svg>

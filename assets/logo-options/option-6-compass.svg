@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="CS Career logo, option 6: compass">
+  <circle cx="32" cy="32" r="32" fill="#0A1F44"/>
+  <circle cx="32" cy="32" r="25" fill="none" stroke="#8DB8FF" stroke-width="3"/>
+  <g transform="rotate(45 32 32)">
+    <path d="M32 11L39 32H25Z" fill="#fff"/>
+    <path d="M32 53L39 32H25Z" fill="#1F5FD8"/>
+  </g>
+  <circle cx="32" cy="32" r="3.5" fill="#0A1F44" stroke="#fff" stroke-width="2"/>
+</svg>

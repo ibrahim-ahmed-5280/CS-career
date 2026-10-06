@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="CS Career logo, option 5: hexagon with rising steps">
+  <path d="M32 6L54.5 19V45L32 58L9.5 45V19Z" fill="#1F5FD8" stroke="#1F5FD8" stroke-width="7" stroke-linejoin="round"/>
+  <rect x="18" y="35" width="8" height="12" rx="2" fill="#fff"/>
+  <rect x="28" y="27" width="8" height="20" rx="2" fill="#fff"/>
+  <rect x="38" y="18" width="8" height="29" rx="2" fill="#8DB8FF"/>
+</svg>

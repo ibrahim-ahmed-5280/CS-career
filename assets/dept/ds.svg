@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" role="img" aria-hidden="true">
+  <!-- flat illustration: solid fills only, no gradients. Icons: Tabler Icons (MIT) -->
+  <circle cx="240" cy="170" r="160" fill="#174BAD"/>
+  <rect x="56" y="58" width="340" height="228" rx="16" fill="#fff"/>
+  <rect x="78" y="76" width="96" height="12" rx="6" fill="#8DB8FF"/><rect x="78" y="96" width="60" height="8" rx="4" fill="#EAF2FF"/>
+  <path d="M74 252H250" stroke="#EAF2FF" stroke-width="3"/>
+  <rect x="80" y="208" width="22" height="42" rx="5" fill="#1F5FD8"/><rect x="112" y="176" width="22" height="74" rx="5" fill="#8DB8FF"/><rect x="144" y="192" width="22" height="58" rx="5" fill="#1F5FD8"/><rect x="176" y="146" width="22" height="104" rx="5" fill="#8DB8FF"/><rect x="208" y="162" width="22" height="88" rx="5" fill="#1F5FD8"/>
+  <rect x="268" y="96" width="112" height="76" rx="10" fill="#EAF2FF"/>
+  <polyline points="280,156 302,134 322,144 346,116 368,124" fill="none" stroke="#1F5FD8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="346" cy="116" r="6" fill="#0A1F44"/><circle cx="368" cy="124" r="6" fill="#0A1F44"/>
+  <circle cx="324" cy="228" r="34" fill="none" stroke="#8DB8FF" stroke-width="16"/>
+  <circle cx="324" cy="228" r="34" fill="none" stroke="#1F5FD8" stroke-width="16" stroke-dasharray="118 214" transform="rotate(-90 324 228)"/>
+  <rect x="346" y="262" width="110" height="60" rx="14" fill="#0A1F44"/>
+  <text x="394" y="300" text-anchor="middle" font-family="Geist, Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">+24%</text>
+  <path d="M430 286l8 -10l8 10" stroke="#8DB8FF" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

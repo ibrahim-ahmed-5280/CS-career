@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 64" role="img" aria-label="CS Career logo, option 11: steps that climb to a star">
+  <path d="M6 57H20V44H33V31H41" fill="none" stroke="#0A1F44" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="20" cy="57" r="3" fill="#8DB8FF"/><circle cx="33" cy="44" r="3" fill="#8DB8FF"/>
+  <polygon points="54.00,6.50 57.88,16.66 68.74,17.21 60.28,24.04 63.11,34.54 54.00,28.60 44.89,34.54 47.72,24.04 39.26,17.21 50.12,16.66" fill="#1F5FD8" stroke="#1F5FD8" stroke-width="2.6" stroke-linejoin="round"/>
+</svg>

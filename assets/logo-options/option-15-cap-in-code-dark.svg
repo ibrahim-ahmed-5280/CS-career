@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 64" role="img" aria-label="CS Career logo, option 15: a graduation cap between code brackets">
+  <g fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 14L7 32L21 50"/><path d="M51 14L65 32L51 50"/>
+  </g>
+  <polygon points="36,16 55,25 36,34 17,25" fill="#5B9BFF" stroke="#5B9BFF" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M26 30V37C26 42 46 42 46 37V30L36 34.5Z" fill="#8DB8FF"/>
+  <path d="M52 27V38" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/><circle cx="52" cy="40.5" r="2.6" fill="#FFFFFF"/>
+</svg>

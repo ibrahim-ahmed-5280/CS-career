@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" role="img" aria-hidden="true">
+  <!-- flat illustration: solid fills only, no gradients. Icons: Tabler Icons (MIT) -->
+  <circle cx="240" cy="170" r="160" fill="#174BAD"/>
+
+  <rect x="52" y="116" width="236" height="162" rx="16" fill="#fff"/>
+  <path d="M52 132a16 16 0 0 1 16-16h204a16 16 0 0 1 16 16L170 210Z" fill="#EAF2FF"/>
+  <path d="M52 132L170 210L288 132" fill="none" stroke="#8DB8FF" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M60 270L132 198M280 270L208 198" fill="none" stroke="#8DB8FF" stroke-width="4" stroke-linecap="round"/>
+  <rect x="104" y="238" width="132" height="10" rx="5" fill="#EAF2FF"/>
+  <circle cx="288" cy="124" r="16" fill="#1F5FD8"/>
+  <circle cx="288" cy="124" r="5" fill="#fff"/>
+
+  <rect x="228" y="40" width="170" height="86" rx="22" fill="#fff"/>
+  <path d="M262 124L252 152L292 124Z" fill="#fff"/>
+  <rect x="252" y="62" width="96" height="10" rx="5" fill="#1F5FD8"/>
+  <rect x="252" y="82" width="122" height="10" rx="5" fill="#8DB8FF"/>
+  <rect x="252" y="102" width="70" height="10" rx="5" fill="#EAF2FF"/>
+
+  <rect x="344" y="150" width="104" height="170" rx="20" fill="#0A1F44"/>
+  <rect x="354" y="168" width="84" height="136" rx="10" fill="#EAF2FF"/>
+  <rect x="379" y="158" width="34" height="5" rx="2.5" fill="#174BAD"/>
+  <circle cx="396" cy="208" r="24" fill="#25D366"/>
+  <g transform="translate(396 208) scale(1.35) translate(-12 -12)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></g>
+  <rect x="364" y="246" width="64" height="9" rx="4.5" fill="#8DB8FF"/>
+  <rect x="372" y="264" width="48" height="9" rx="4.5" fill="#1F5FD8"/>
+  <rect x="364" y="282" width="64" height="9" rx="4.5" fill="#8DB8FF"/>
+
+  <circle cx="96" cy="76" r="32" fill="#fff"/>
+  <g transform="translate(96 76) scale(1.9) translate(-12 -12)" fill="none" stroke="#1F5FD8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28" /></g>
+</svg>

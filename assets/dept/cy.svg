@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" role="img" aria-hidden="true">
+  <!-- flat illustration: solid fills only, no gradients. Icons: Tabler Icons (MIT) -->
+  <circle cx="240" cy="170" r="160" fill="#174BAD"/>
+  <circle cx="240" cy="170" r="142" fill="none" stroke="#8DB8FF" stroke-width="2" stroke-dasharray="4 10"/>
+  <path d="M240 46L332 82V168C332 232 292 272 240 298C188 272 148 232 148 168V82Z" fill="#fff"/>
+  <path d="M240 70L312 98V168C312 218 282 250 240 272C198 250 168 218 168 168V98Z" fill="#EAF2FF"/>
+  <path d="M202 170L231 199L282 138" stroke="#1F5FD8" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <rect x="62" y="206" width="76" height="62" rx="12" fill="#0A1F44"/>
+  <path d="M80 206V190a20 20 0 0 1 40 0V206" stroke="#0A1F44" stroke-width="11" fill="none"/>
+  <circle cx="100" cy="232" r="9" fill="#8DB8FF"/><rect x="96" y="236" width="8" height="18" rx="4" fill="#8DB8FF"/>
+  <rect x="338" y="196" width="128" height="94" rx="12" fill="#0A1F44"/>
+  <path d="M356 220l14 10l-14 10" stroke="#8DB8FF" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="380" y="226" width="62" height="8" rx="4" fill="#fff"/><rect x="356" y="252" width="86" height="8" rx="4" fill="#8DB8FF"/><rect x="356" y="268" width="50" height="8" rx="4" fill="#8DB8FF"/>
+</svg>
