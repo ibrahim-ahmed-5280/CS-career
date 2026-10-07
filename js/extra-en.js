@@ -8,7 +8,7 @@
   L.ui.quiz.loading = "Finding your best matches…";
   L.ui.quiz.success = "All done! Your results are ready.";
   L.ui.close = "Close";
-  L.ui.hero.photoAlt = "A student using a laptop on campus";
+  L.ui.hero.photoAlt = "A Somali student pointing at a wall of the seven department choices";
   L.ui.detail.progress = "{n} of {t} steps done";
   L.ui.detail.markDone = "Mark this step as done";
   L.ui.nav.deptAll = "All departments";

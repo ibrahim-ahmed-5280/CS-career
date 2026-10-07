@@ -11,13 +11,19 @@
     $("heroCta1").textContent = h.cta1;
     $("heroCta2").textContent = h.cta2;
     var T = A.T();
-    var rows = DEPTS.map(function (d) {
-      return '<a href="department.html?d=' + d.id + '"><span class="wall-ic">' + window.icon(d.id) + "</span><span>" + esc(T.depts[d.id].name) + "</span></a>";
+    // Clickable areas over the 7 tiles painted on the wall photo (px in the 1941x808 image): x, y, w, h
+    var SLOTS = [[725, 198, 201, 204], [942, 207, 186, 191], [1143, 215, 163, 181], [1320, 222, 139, 171],
+                 [808, 421, 213, 209], [1037, 417, 187, 197], [1238, 414, 164, 188]];
+    var IW = 1941, IH = 808;
+    function pc(v, t) { return (v / t * 100).toFixed(2) + "%"; }
+    var tiles = DEPTS.map(function (d, i) {
+      var s = SLOTS[i];
+      return '<a class="wt" style="--x:' + pc(s[0], IW) + ";--y:" + pc(s[1], IH) + ";--w:" + pc(s[2], IW) + ";--h:" + pc(s[3], IH) +
+        '" title="' + esc(T.depts[d.id].name) + '" href="department.html?d=' + d.id + '"><span class="sr">' + esc(T.depts[d.id].name) + "</span></a>";
     }).join("");
     $("heroArt").innerHTML =
-      '<div class="stage"><span class="baseboard"></span>' +
-      '<nav class="wall" aria-label="' + esc(A.ui().depts.title) + '"><p class="wall-title">' + esc(A.ui().about.treeFaculty) + "</p>" + rows + "</nav>" +
-      '<img class="person" src="assets/student.webp" width="800" height="1000" alt="' + esc(h.photoAlt) + '"></div>';
+      '<div class="scene"><img class="scene-img" src="assets/hero-wall.webp" width="1941" height="808" alt="' + esc(h.photoAlt) + '">' +
+      '<nav class="wall-tiles" aria-label="' + esc(A.ui().depts.title) + '">' + tiles + "</nav></div>";
   }
 
   function renderAbout() {

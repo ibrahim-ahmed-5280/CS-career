@@ -8,7 +8,7 @@
   L.ui.quiz.loading = "نبحث عن أنسب الأقسام لك…";
   L.ui.quiz.success = "اكتمل الاختبار! نتيجتك جاهزة.";
   L.ui.close = "إغلاق";
-  L.ui.hero.photoAlt = "طالب يستخدم حاسوبًا محمولًا في الحرم الجامعي";
+  L.ui.hero.photoAlt = "طالب صومالي يشير إلى جدار يضم الأقسام السبعة";
   L.ui.detail.progress = "{n} من {t} خطوات مكتملة";
   L.ui.detail.markDone = "حدّد هذه الخطوة كمكتملة";
   L.ui.nav.deptAll = "كل الأقسام";

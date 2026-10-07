@@ -8,7 +8,7 @@
   L.ui.quiz.loading = "Waxaan raadinaynaa waaxyaha kuugu habboon…";
   L.ui.quiz.success = "Waa dhammaaday! Natiijadaada way diyaar tahay.";
   L.ui.close = "Xidh";
-  L.ui.hero.photoAlt = "Arday kombiyuutar ku shaqeynaya jaamacadda";
+  L.ui.hero.photoAlt = "Arday Soomaali ah oo farta ku fiiqaya darbi ay ku yaalaan toddobada waax";
   L.ui.detail.progress = "{n} ka mid ah {t} tallaabo ayaa la dhammeeyay";
   L.ui.detail.markDone = "Calaamadee tallaabadan inay dhammaatay";
   L.ui.nav.deptAll = "Waaxyaha oo dhan";

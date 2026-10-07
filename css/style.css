@@ -138,18 +138,20 @@ html[dir="rtl"] .nav > ul > li > a:hover::after, html[dir="rtl"] .nav > ul > li 
 @media (max-width: 520px) { .nav { width: 100%; } }
 
 /* ---------- Hero (flat navy, art on the right) ---------- */
-.hero { position: relative; overflow: hidden; background: var(--navy); color: #fff; display: flex; align-items: center; min-height: clamp(520px, 56vw, 640px); padding: 72px 0; }
-/* campus photo behind the hero: blurred, with a flat navy tint on top so the content stays sharp */
-.hero { isolation: isolate; }
-.hero::before { content: ""; position: absolute; inset: -24px; z-index: -2; background: url("../assets/campus.webp") center / cover no-repeat; filter: blur(7px); }
-.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(7, 22, 52, .66); }
+.hero { position: relative; overflow: hidden; isolation: isolate; background: #dbe6f5; color: #0a1f44; display: flex; align-items: center; height: clamp(410px, 41.5vw, 900px); padding: 36px 0; }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(90deg, rgba(255, 255, 255, .6), rgba(255, 255, 255, 0) 42%); }
 .hero > .wrap { position: relative; z-index: 1; }
-.hero-grid { display: grid; grid-template-columns: minmax(0, 450px) 1fr; gap: 40px; align-items: center; }
-.hero-copy { max-width: 450px; }
-.hero h1 { font-size: clamp(2rem, 3.8vw, 3rem); }
-.hero h1 { color: #fff; }
-.hero .lead { color: #bcd0f0; }
-@media (max-width: 980px) { .hero-art { display: none; } .hero-grid { grid-template-columns: 1fr; } .hero { min-height: 0; padding: 64px 0; } }
+.hero-grid { display: grid; grid-template-columns: minmax(0, min(420px, 31vw)) 1fr; gap: 40px; align-items: center; }
+html[dir="rtl"] .hero-grid { direction: ltr; }
+html[dir="rtl"] .hero-copy { direction: rtl; }
+.hero-copy { max-width: min(420px, 31vw); }
+.hero h1 { font-size: clamp(2rem, 3.6vw, 3.2rem); color: #0a1f44; }
+.hero .lead { color: #2c4468; }
+.hero .btn.invert { background: #1f5fd8; color: #fff; }
+.hero .btn.invert:hover { background: #174cb0; }
+.hero .btn.outline-light { border-color: rgba(10, 31, 68, .35); color: #0a1f44; }
+.hero .btn.outline-light:hover { background: rgba(10, 31, 68, .08); }
+@media (max-width: 980px) { .hero-art { display: none; } .hero-grid { grid-template-columns: 1fr; } .hero { height: auto; padding: 64px 0; background: linear-gradient(135deg, #e8f0fb, #cfdff5); } }
 
 /* ---------- Sections ---------- */
 .sec { padding: clamp(48px, 7vw, 88px) 0; }
@@ -343,20 +345,14 @@ input::placeholder, textarea::placeholder { color: var(--muted-foreground); }
 .rm li.is-done .rm-check { background: #fff; border-color: #fff; color: var(--primary); }
 @media (max-width: 700px) { .rm { grid-template-columns: 1fr; } }
 
-/* ---------- Hero: student in front of a wall of department signs ---------- */
-/* 1u = 1px when the art is 630px wide; everything scales with the container */
-.hero-art { container-type: inline-size; justify-self: end; width: min(630px, 100%); aspect-ratio: 630 / 500; }
-.stage { --u: calc(100cqw / 630); position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: calc(var(--u) * 20); background: #eaf2ff; }
-.baseboard { position: absolute; inset-inline: 0; bottom: 0; height: calc(var(--u) * 26); background: #c7d8f4; }
-.wall { position: absolute; left: calc(var(--u) * 14); top: calc(var(--u) * 24); width: calc(var(--u) * 272); padding: calc(var(--u) * 14); display: grid; gap: calc(var(--u) * 8); }
-.wall-title { height: calc(var(--u) * 28); margin-bottom: calc(var(--u) * 15); color: #0a1f44; font-weight: 700; font-size: calc(var(--u) * 15.5); line-height: calc(var(--u) * 28); white-space: nowrap; }
-.wall a { display: flex; align-items: center; gap: calc(var(--u) * 10); height: calc(var(--u) * 44); padding: 0 calc(var(--u) * 10) 0 calc(var(--u) * 6); border-radius: 999px; background: #fff; color: #0a1f44; font-weight: 600; font-size: calc(var(--u) * 14); text-decoration: none; box-shadow: 0 calc(var(--u) * 3) 0 #c7d8f4; transition: background .15s, color .15s; }
-html[dir="rtl"] .wall a { padding: 0 calc(var(--u) * 6) 0 calc(var(--u) * 10); }
-.wall a:hover { background: #1f5fd8; color: #fff; }
-.wall-ic { display: grid; place-items: center; flex: none; width: calc(var(--u) * 32); height: calc(var(--u) * 32); border-radius: 50%; background: #1f5fd8; color: #fff; font-size: calc(var(--u) * 17); }
-.wall-ic .ti { font-size: inherit; }
-.wall a:hover .wall-ic { background: #fff; color: #1f5fd8; }
-.person { position: absolute; right: 0; bottom: 0; height: 100%; width: auto; pointer-events: none; }
+/* ---------- Hero: full-width photo of a student at the department wall ---------- */
+.hero-art { position: absolute; inset: 0; z-index: -2; container-type: size; }
+.scene { position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: max(100cqw, calc(100cqh * 1941 / 808)); aspect-ratio: 1941 / 808; container-type: inline-size; }
+.scene-img { display: block; width: 100%; height: 100%; }
+.wall-tiles { position: absolute; inset: 0; }
+.wt { position: absolute; left: var(--x); top: var(--y); width: var(--w); height: var(--h); border-radius: 6%; transition: background .15s, box-shadow .15s; }
+.wt:hover, .wt:focus-visible { background: rgba(31, 95, 216, .12); box-shadow: 0 0 0 2px rgba(31, 95, 216, .55); outline: none; }
+.wt .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* ---------- Department page header: illustration on the right ---------- */
 .dh-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 400px); gap: 32px; align-items: center; }
