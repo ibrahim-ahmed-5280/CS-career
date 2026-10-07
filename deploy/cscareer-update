@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Pull the newest code from GitHub and publish it. Runs every 30s from a systemd timer.
+set -euo pipefail
+REPO=https://github.com/ibrahim-ahmed-5280/CS-career.git
+SRC=/opt/cscareer
+WEB=/var/www/cscareer
+
+[ -d "$SRC/.git" ] || git clone --quiet --depth 1 "$REPO" "$SRC"
+cd "$SRC"
+git fetch --quiet --depth 1 origin master
+NEW=$(git rev-parse FETCH_HEAD)
+OLD=$(cat /var/lib/cscareer.rev 2>/dev/null || true)
+[ "$NEW" = "$OLD" ] && exit 0
+
+git reset --quiet --hard FETCH_HEAD
+TMP=$(mktemp -d /var/www/.cscareer.XXXXXX)
+cp -r index.html department.html quiz.html contact.html assets css js "$TMP"/
+rm -rf "$TMP"/assets/logo-options "$TMP"/assets/hero-bg.svg
+chown -R www-data:www-data "$TMP"; chmod 755 "$TMP"
+[ -d "$WEB" ] && mv "$WEB" "$WEB.old"
+mv "$TMP" "$WEB"
+rm -rf "$WEB.old"
+echo "$NEW" > /var/lib/cscareer.rev
+echo "$(date -Is) deployed ${NEW:0:7}" >> /var/log/cscareer-deploy.log
