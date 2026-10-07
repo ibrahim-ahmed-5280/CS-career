@@ -370,7 +370,11 @@ input::placeholder, textarea::placeholder { color: var(--muted-foreground); }
 .dh-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 400px); gap: 32px; align-items: center; }
 .dh-art { width: 100%; height: auto; display: block; }
 .detail-hero { padding-bottom: 28px; }
-@media (max-width: 860px) { .dh-grid { grid-template-columns: 1fr; } .dh-art { display: none; } }
+@media (max-width: 860px) {
+  .dh-grid { grid-template-columns: 1fr; }
+  .dh-grid .dh-art { max-width: 280px; margin: 8px auto 0; }
+  .dh-grid.quiz-grid .dh-art { display: none; }
+}
 
 /* ---------- Back to top (fixed) ---------- */
 .top-sentinel { position: absolute; top: 480px; left: 0; width: 1px; height: 1px; pointer-events: none; }
