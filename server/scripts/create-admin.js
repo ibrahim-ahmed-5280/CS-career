@@ -13,18 +13,41 @@ if (!email || !/^\S+@\S+\.\S+$/.test(email) || !["admin", "viewer"].includes(rol
   process.exit(1);
 }
 
-const password = process.env.ADMIN_PASSWORD || await (async () => {
-  // Typing is hidden: nothing after the prompt is echoed
-  const rl = createInterface({ input: stdin, output: stdout, terminal: true });
-  let muted = false;
-  rl._writeToOutput = (s) => { if (!muted) stdout.write(s); };
-  const answer = rl.question("Password (at least 10 characters, not shown): ");
-  muted = true;
-  const p = await answer;
-  rl.close();
-  stdout.write("\n");
-  return p;
-})();
+/* Reads a line without showing it (in a terminal); piped input is read as a normal line. */
+async function askHidden(question) {
+  if (!stdin.isTTY) {
+    const rl = createInterface({ input: stdin });
+    stdout.write(question);
+    const [line = ""] = await rl[Symbol.asyncIterator]().next().then((r) => [r.value]);
+    rl.close();
+    stdout.write("\n");
+    return line;
+  }
+  stdout.write(question);
+  stdin.setRawMode(true);
+  stdin.setEncoding("utf8");
+  stdin.resume();
+  return new Promise((resolve) => {
+    let typed = "";
+    const onData = (chunk) => {
+      for (const c of chunk) {
+        if (c === "\r" || c === "\n") {
+          stdin.setRawMode(false);
+          stdin.pause();
+          stdin.off("data", onData);
+          stdout.write("\n");
+          return resolve(typed);
+        }
+        if (c === "\u0003") process.exit(130);                   // Ctrl+C
+        if (c === "\u007f" || c === "\b") typed = typed.slice(0, -1);
+        else typed += c;
+      }
+    };
+    stdin.on("data", onData);
+  });
+}
+
+const password = process.env.ADMIN_PASSWORD || await askHidden("Password (at least 10 characters, not shown): ");
 if (password.length < 10) { console.error("Password must be at least 10 characters."); process.exit(1); }
 
 await connectDb();
