@@ -9,7 +9,7 @@ HOST=root@104.237.2.66
 DOMAIN=cscareer.onepercenttech.com
 cd "$(dirname "$0")/.."
 
-scp deploy/server-setup.sh deploy/cscareer-update deploy/nginx-cscareer.conf deploy/nginx-cscareer-http.conf server/.env.example "$HOST":/tmp/
+scp deploy/server-setup.sh deploy/server-db-user.sh deploy/cscareer-update deploy/nginx-cscareer.conf deploy/nginx-cscareer-http.conf server/.env.example "$HOST":/tmp/
 ssh -t "$HOST" "sed -i 's/\r\$//' /tmp/server-setup.sh && bash /tmp/server-setup.sh"
 
 echo

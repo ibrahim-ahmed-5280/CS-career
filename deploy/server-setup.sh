@@ -45,6 +45,13 @@ if grep -q "cluster.example" /etc/cscareer.env; then
   sed -i 's|^MONGODB_URI=.*|MONGODB_URI=mongodb://127.0.0.1:27017/cscareer|' /etc/cscareer.env
 fi
 
+# MongoDB on this server already asks for a login (shared with other apps): give this app its own user
+if grep -qx 'MONGODB_URI=mongodb://127.0.0.1:27017/cscareer' /etc/cscareer.env \
+   && ! $(command -v mongosh || echo mongo) --quiet mongodb://127.0.0.1:27017/cscareer --eval 'db.getCollectionNames()' >/dev/null 2>&1; then
+  sed -i 's/\r$//' /tmp/server-db-user.sh
+  bash /tmp/server-db-user.sh
+fi
+
 step "HTTPS certificate"
 # HTTPS certificate (first time only). /var/www/cscareer is the folder certbot renewals already use.
 mkdir -p /var/www/cscareer
@@ -100,6 +107,6 @@ cp /tmp/nginx-cscareer.conf /etc/nginx/sites-available/cscareer
 ln -sf /etc/nginx/sites-available/cscareer /etc/nginx/sites-enabled/cscareer
 nginx -t && systemctl reload nginx
 if command -v ufw >/dev/null && ufw status | grep -q active; then ufw allow 'Nginx Full' || true; fi
-rm -f /tmp/cscareer-update /tmp/nginx-cscareer*.conf /tmp/.env.example /tmp/server-setup.sh
+rm -f /tmp/cscareer-update /tmp/nginx-cscareer*.conf /tmp/.env.example /tmp/server-setup.sh /tmp/server-db-user.sh
 tail -2 /var/log/cscareer-deploy.log
 step "Done"

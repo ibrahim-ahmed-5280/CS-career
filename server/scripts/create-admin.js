@@ -14,9 +14,15 @@ if (!email || !/^\S+@\S+\.\S+$/.test(email) || !["admin", "viewer"].includes(rol
 }
 
 const password = process.env.ADMIN_PASSWORD || await (async () => {
-  const rl = createInterface({ input: stdin, output: stdout });
-  const p = await rl.question("Password (at least 10 characters): ");
+  // Typing is hidden: nothing after the prompt is echoed
+  const rl = createInterface({ input: stdin, output: stdout, terminal: true });
+  let muted = false;
+  rl._writeToOutput = (s) => { if (!muted) stdout.write(s); };
+  const answer = rl.question("Password (at least 10 characters, not shown): ");
+  muted = true;
+  const p = await answer;
   rl.close();
+  stdout.write("\n");
   return p;
 })();
 if (password.length < 10) { console.error("Password must be at least 10 characters."); process.exit(1); }
